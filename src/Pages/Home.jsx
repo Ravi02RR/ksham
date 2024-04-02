@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import home from '../assets/home.mp4';
 import Supportes from '../Components/Supportes';
 import OurSponsors from '../Components/ourSponsers';
+import './homeCustom.css';
 
 const Home = () => {
   useEffect(() => {
@@ -16,7 +17,7 @@ const Home = () => {
   return (
     <div>
       {/* First section */}
-      <div className="hero min-h-screen relative">
+      <div className="hero min-h-screen relative" id='sec1'>
         <video className="absolute inset-0 w-full h-full  object-fill" autoPlay loop muted>
           <source src={home} type="video/mp4" />
           Your browser does not support the video tag.
@@ -24,7 +25,7 @@ const Home = () => {
       </div>
 
       {/* Second section */}
-      <div className="hero min-h-screen bg-base-200 relative" id='sec2'>
+      <div className="hero  min-h-screen bg-base-200 relative" id='sec2'>
         <div className="hero-content flex flex-col lg:flex-row items-center justify-center relative z-10">
           <div className="w-full lg:w-[75%] h-auto lg:h-[300px] rounded-lg shadow-2xl overflow-hidden mb-8 lg:mb-0">
             <canvas id='canvas3d' className="w-full h-full"></canvas>
