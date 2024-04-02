@@ -4,7 +4,7 @@ import './Loader.css'
 
 const Loader = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex items-center justify-center">
         <span className="loader"></span>
     </div>
   )
