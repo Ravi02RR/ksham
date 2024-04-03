@@ -1,8 +1,14 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 import axios from 'axios';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 
 const Contact = () => {
+
+
   const [contactInfo, setContactInfo] = useState({
     fullName: '',
     email: '',
@@ -10,8 +16,7 @@ const Contact = () => {
     message: ''
   });
 
-  const [success, setSuccess] = useState(false);
-  const [error, setError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e) => {
     setContactInfo({ ...contactInfo, [e.target.name]: e.target.value });
@@ -19,22 +24,29 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
     try {
-      await axios.post('https://enliven-the-ngo-website.onrender.com/contact', contactInfo);
-      setSuccess(true);
-      setContactInfo({
-        fullName: '',
-        email: '',
-        phone: '',
-        message: ''
-      });
+      const response = await axios.post('https://enliven-the-ngo-website.onrender.com/contact', contactInfo);
+      if (response.data.success) {
+        setContactInfo({
+          fullName: '',
+          email: '',
+          phone: '',
+          message: ''
+        });
+        toast.success('Message sent successfully!');
+      } else {
+        toast.error(response.data.errorMessage || 'Failed to send the message. Please try again.');
+      }
     } catch (err) {
-      setError(true);
+      toast.error('Failed to send the message. Please try again.');
+    } finally {
+      setIsLoading(false);
     }
   }
 
   return (
-    <div className="flex justify-center items-center min-h-screen p-4  shadow-lg ">
+    <div className="flex justify-center items-center min-h-screen p-4 shadow-lg">
       <div className="w-full sm:w-10/12 md:w-8/12 lg:w-6/12 p-8 rounded-md shadow-lg">
         <h1 className="text-3xl font-bold mb-4 text-center text-bla">Contact Us</h1>
         <p className="text-lg font-semibold mb-8 text-center">YOUR IDEA <span className="text-yellow-400">IS OUR</span> SOLUTION</p>
@@ -73,12 +85,12 @@ const Contact = () => {
           <button
             className="w-full bg-yellow-400 text-black py-3 rounded-md hover:bg-yellow-500"
             type="submit"
+            disabled={isLoading}
           >
-            Send Message
+            {isLoading ?'Sending.....' : 'Send Message'}
           </button>
         </form>
-        {success && <p className="text-green-600 mt-3 text-center">Message sent successfully!</p>}
-        {error && <p className="text-red-600 mt-3 text-center">Failed to send the message. Please try again.</p>}
+        <ToastContainer />
       </div>
     </div>
   )
