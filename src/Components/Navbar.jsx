@@ -33,9 +33,9 @@ const Navbar = () => {
                     <ColorSwitch />
                 </div>
             </div>
-            <div className="drawer-side z-50">
+            <div className="drawer-side z-50  mt-16 ">
                 <label htmlFor="my-drawer-3" aria-label="close sidebar" className="drawer-overlay"></label>
-                <ul className="menu p-4 w-80 min-h-full bg-base-200">
+                <ul className="menu p-4 w-80  min-h-screen bg-base-200 ">
                     <li><Link to={"/"} className="text-lg font-semibold">Home</Link></li>
                     <li><Link to={"/About"} className="text-lg font-semibold">About</Link></li>
                     <li><Link to={"/Contact"} className="text-lg font-semibold">Contact</Link></li>
