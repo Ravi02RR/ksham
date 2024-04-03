@@ -2,10 +2,11 @@
 import React, { useEffect } from 'react';
 import { Application } from '@splinetool/runtime';
 import { Link } from 'react-router-dom';
-import home from '../assets/home.mp4';
+
 import Supportes from '../Components/Supportes';
 import OurSponsors from '../Components/ourSponsers';
-import './homeCustom.css';
+
+import HomeComponent from '../Components/HomeComponent';
 
 const Home = () => {
   useEffect(() => {
@@ -18,10 +19,8 @@ const Home = () => {
     <div>
       {/* First section */}
       <div className="hero min-h-screen relative" id='sec1'>
-        <video className="absolute inset-0 w-full h-full  object-fill" autoPlay loop muted>
-          <source src={home} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+
+        <HomeComponent></HomeComponent>
       </div>
 
       {/* Second section */}

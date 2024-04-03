@@ -4,6 +4,7 @@ import home from '../assets/home.mp4'
 
 
 
+
 const About = () => {
     return (
         <>
@@ -19,12 +20,12 @@ const About = () => {
                             <div className="pt-1"></div>
 
                             <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-                                <div className="sm:text-center lg:text-left">
+                                <div className="sm:text-center sm:text-sm lg:text-left">
                                     <h2 className="my-6 text-2xl tracking-tight font-extrabold text-gray-900 sm:text-3xl md:text-4xl">
                                         &quot;What We Do&quot;
                                     </h2>
 
-                                    <p className='text-xl'>
+                                    <p className='text-xl sm:text-sm '>
                                         &quot;We at Ksham Innovation work to provide smart aid glasses for Deaf, Mute and Blind.
                                         <br /> The Able glasses uses patented bone conduction to enable Deaf to Listen, interpret sign language for mute, the sensory audio-based information enables the blind to visualize.
                                         <br />The open ear design makes able glasses a complete smart glasses device for everyone.&quot;
@@ -51,12 +52,12 @@ const About = () => {
 
                 {/* crauser */}
 
-                <div className="carousel w-full mt-6">
-                    <div id="slide1" className="carousel-item relative w-full">
+                <div className="carousel w-full  mt-6">
+                    <div id="slide1" className="carousel-item relative w-full  h-full">
 
                         <div className="mockup-window border bg-base-300 p-20">
                             <h2 className="text-3xl font-bold mb-4">Description</h2>
-                            <p className="text-xl font-serif italic leading-relaxed">
+                            <p className="lg:text-xl font-serif italic leading-relaxed sm:text-sm ">
                                 &quot;At Ksham Innovation, we break down barriers and make technology accessible to everyone. We believe that everyone deserves the opportunity to hear, speak, and navigate the world in real-time, regardless of having hearing, speech, or visual impairment.
 
                                 Our technology is designed to empower those with disabilities, allowing them to learn, communicate & perform their daily chores with greater ease and independence. But our work doesn&apos;t stop there. We dream & envision creating a smart and safer alternative to traditional earbuds and headphones, extending the age during which people may face difficulties in hearing.
@@ -69,11 +70,12 @@ const About = () => {
                             <a href="#slide2" className="btn btn-circle">❯</a>
                         </div>
                     </div>
-                    <div id="slide2" className="carousel-item relative w-full">
+                    <div id="slide2" className="carousel-item relative w-full h-full">
                         <div className="mockup-window border bg-base-300 p-20">
                             <h2 className="text-3xl font-bold mb-4">Our Vison</h2>
-                            <p className="text-xl font-serif italic leading-relaxed">
-                                <span className='font-bold'>`&quot;Empowering a World Without Communication Barriers&quot;`</span>: Our vision is to leverage cutting-edge technology to empower individuals with hearing, speech, or visual impairments, fostering a more inclusive and accessible world. We envision a future where our smart glasses become a bridge to communication, independence, and endless possibilities, allowing everyone, regardless of their abilities, to connect, express themselves, and thrive in our interconnected society.
+                            <p className="lg:text-xl font-serif italic leading-relaxed md:text-sm ">
+                                <span className='font-bold'>&quot;Empowering a World Without Communication Barriers&quot;`</span>: Our vision is to leverage cutting-edge technology to empower individuals with hearing, speech, or visual impairments, fostering a more inclusive and accessible world. We envision a future where our smart glasses become a bridge to communication, independence, and endless possibilities, allowing everyone, regardless of their abilities, to connect, express themselves, and thrive in our interconnected society.
+                                By doing so, we are not only improving the lives of those with hearing loss, but also providing a solution for anyone who wants to enjoy music, information access in a safer way, and audio content while minimizing the risk of damaging their hearing.&quot;&quot;
                             </p>
                         </div>
                         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -85,16 +87,7 @@ const About = () => {
 
 
 
-                {/* <div className="mockup-window border bg-base-300 p-8 mt-4">
-                    <h2 className="text-3xl font-bold mb-4">Description</h2>
-                    <p className="text-xl font-serif italic leading-relaxed">
-                        &quot;At Ksham Innovation, we break down barriers and make technology accessible to everyone. We believe that everyone deserves the opportunity to hear, speak, and navigate the world in real-time, regardless of having hearing, speech, or visual impairment.
 
-                        Our technology is designed to empower those with disabilities, allowing them to learn, communicate & perform their daily chores with greater ease and independence. But our work doesn&apos;t stop there. We dream & envision creating a smart and safer alternative to traditional earbuds and headphones, extending the age during which people may face difficulties in hearing.
-
-                        By doing so, we are not only improving the lives of those with hearing loss, but also providing a solution for anyone who wants to enjoy music, information access in a safer way, and audio content while minimizing the risk of damaging their hearing.&quot;
-                    </p>
-                </div> */}
             </div>
         </>
     )

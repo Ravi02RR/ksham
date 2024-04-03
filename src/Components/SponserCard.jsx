@@ -6,7 +6,7 @@ import React from 'react';
 const SponserCard = ({ image }) => {
     return (
         <div className="card bg-white shadow-md">
-            <img src={image} alt="sponsor" className="object-contain h-32 lg:h-40 mx-auto" /> {/* Adjust image size here */}
+            <img src={image} alt="sponsor" className="object-contain h-32 lg:h-40 mx-auto" /> 
         </div>
     );
 }
