@@ -31,11 +31,11 @@ const Home = () => {
           </div>
           <div className="text-center lg:text-left  font-serif">
             <h1 className="text-3xl lg:text-3xl font-bold mb-4 leading-tight">&quot;Introducing&quot;</h1>
-            <h2 className="text-4xl lg:text-4xl font-bold mb-4 leading-tight">&quot;World&aposs 1st Smart Aid Glasses&quot;</h2>
+            <h2 className="text-4xl lg:text-4xl font-bold mb-4 leading-tight">&quot;World&apos;s 1st Smart Aid Glasses&quot;</h2>
             <p className="text-lg lg:text-2xl mb-4 lg:mb-6">&quot;Revolutionizing Accessibility for&quot;</p>
             <ul className="mb-6 list-disc text-lg lg:text-2xl">
               <li className="inline-block mr-4"><span className="font-extrabold text-3xl lg:text-4xl">&quot;Deaf&quot;,</span></li>
-              <li className="inline-block mr-4"><span className="font-extrabold text-3xl lg:text-4xl underline">&quot;Mute&quot;,</span></li>
+              <li className="inline-block mr-4"><span className="font-extrabold text-3xl lg:text-4xl ">&quot;Mute&quot;,</span></li>
               <li className="inline-block"><span className="font-extrabold text-3xl lg:text-4xl">&quot;Blind&quot;</span></li>
             </ul>
             <p className="text-lg lg:text-xl mb-6 lg:mb-8 leading-relaxed">The Able glasses utilize patented bone conduction technology to enable the Deaf to listen, interpret signs, and serve as a voice assist tool for the Mute. The sensory audio-based information enables the Blind to visualize their surroundings.</p>
